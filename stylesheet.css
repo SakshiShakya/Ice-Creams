@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.container{
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.container h1{
+    text-align: center;
+    font-size: 3rem;
+    margin: 20px 0;
+    font-family: 'Sacramento', cursive;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    width: 30%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px grey;
+    border-radius: 10px;
+    filter: grayscale(100%);
+}
+.card:hover{
+    filter: drop-shadow(0 0 10px grey);
+    transform: scale(1.03);
+    transition: transform 250ms;
+}
+.card:hover img{
+    filter: grayscale(0%);
+}
+.card figcaption{
+    position: absolute;
+    bottom: 0;
+    font-family: 'Sacramento', cursive;
+    padding: 25px;
+    width: 100%;
+    height: 20%;
+    opacity: 0;
+    background-image: linear-gradient();
+}
+.card:hover figcaption{
+    opacity: 1;
+    transform: scale(1.03);
+    transition: transform 250ms;
+}
